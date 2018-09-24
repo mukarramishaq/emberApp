@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+{{#link-to "index" class="navbar-brand"}}{{t "navbar.brand"}}{{/link-to}}
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item active">
+      {{#link-to "index" class="nav-link"}}{{t "navbar.home"}}{{/link-to}}
+    </li>
+    <li class="nav-item">
+      {{#link-to "students" class="nav-link"}}{{t "navbar.student"}}{{/link-to}}
+    </li>
+    <li class="nav-item">
+      {{#link-to "teachers" class="nav-link"}}{{t "navbar.teacher"}}{{/link-to}}
+    </li>
+    <li class="nav-item">
+      {{#link-to "courses" class="nav-link"}}{{t "navbar.course"}}{{/link-to}}
+    </li>
+  </ul>
+</div>
+</nav>

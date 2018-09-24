@@ -7,6 +7,9 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('students');
+  this.route('teachers');
+  this.route('courses');
 });
 
 export default Router;
