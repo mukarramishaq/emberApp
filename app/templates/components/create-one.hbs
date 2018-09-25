@@ -1,4 +1,4 @@
-<form {{action 'createOne' model on='submit'}}>
+<form {{action 'createOne' model on='submit'}} class="">
 
     {{#each model.errors.base as |error|}}
         <p class="error">{{error.message}}</p>

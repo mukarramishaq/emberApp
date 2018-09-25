@@ -17,8 +17,13 @@ export default {
   },
 
     "student" : {
-      "list" : {
+        "index" : {
           "heading" : "List of All Students"
-      }
+        },
+        "buttons" : {
+          "create" : "Create New Student",
+          "edit" : "Edit",
+          "delete" : "Delete"
+        }
     }
 };
