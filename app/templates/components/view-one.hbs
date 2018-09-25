@@ -1,7 +1,20 @@
 <div class="row">
-  <div class="col-md-10 col-md-offset-1">
-    <h4 class="h4">{{model.name}}</h4>
-    <h4 class="h4">{{model.isH1}}</h4>
-  <h1 {{action "toggleProperty" "isH1"}} class="{{if isH1 "h1" "h5"}}">{{model.class}}</h1>
-  </div>
+    <div class="col-md-10 col-md-offset-1">
+        <table class="table">
+            <thead>
+                <tr>
+                    {{#each properties as |property|}}
+                        <th>{{property}}</th>
+                    {{/each}}
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    {{#each properties as |property|}}
+                        <td>{{get model property}}</td>
+                    {{/each}}
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

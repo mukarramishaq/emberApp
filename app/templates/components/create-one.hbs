@@ -1,0 +1,16 @@
+<form {{action 'createOne' model on='submit'}}>
+
+    {{#each model.errors.base as |error|}}
+        <p class="error">{{error.message}}</p>
+    {{/each}}
+
+    {{#each properties as |property|}}
+        <div class="form-group">
+            <label for="id-input-{{property}}">
+                Enter {{property}}:
+            </label>
+            <input id="id-input-{{property}}" type="text" class="form-control" value="{{get model property}}" name="{{property}}">
+        </div>
+    {{/each}}
+    <input type="submit" class="btn btn-primary" value="Create">
+</form>

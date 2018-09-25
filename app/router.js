@@ -7,9 +7,15 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('students');
-  this.route('teachers');
-  this.route('courses');
+  this.route('students', function() {
+    this.route('create');
+  });
+  this.route('teachers', function() {
+    this.route('create');
+  });
+  this.route('courses', function() {
+    this.route('create');
+  });
 });
 
 export default Router;

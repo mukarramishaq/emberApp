@@ -14,5 +14,11 @@ export default {
     "student": "Student",
     "teacher" : "Teacher",
     "course" : "Course"
-  }
+  },
+
+    "student" : {
+      "list" : {
+          "heading" : "List of All Students"
+      }
+    }
 };

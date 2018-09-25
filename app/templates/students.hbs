@@ -1,2 +1,7 @@
-{{view-one model=model}}
-{{outlet}}
+<div class="row" style="margin-top: 30px">
+    <div class="col-md-10 offset-1">
+        <h4 class="h4">{{t 'student.list.heading'}}</h4>
+        {{view-all models=model properties=modelProperties}}
+    </div>
+</div>
+{{outlet properties=modelProperties}}
