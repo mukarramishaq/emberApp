@@ -1,1 +1,11 @@
+<div class="row">
+    <div class="col-md-6 offset-3">
+        {{confirm-box
+            confirmAction=(action 'deleteOne') confirmName=(t "delete.confirm.name") confirmType=(t "delete.confirm.type")
+            cancelAction=(action 'cancelDelete') cancelName=(t "delete.cancel.name") cancelType=(t "delete.cancel.type")
+            boxTitle=(t "delete.confirm.title") boxMessage=(t "delete.confirm.message" object="Teacher" id=model.id)
+            model = model
+        }}
+    </div>
+</div>
 {{outlet}}

@@ -46,5 +46,18 @@ export default {
     a : {
         edit : "Edit",
         delete : "Delete"
+    },
+
+    delete : {
+      confirm : {
+          name : "Yes, Delete it",
+          title : "Confirm Delete Operation",
+          message : "You are about to delete {{object}} with ID: {{id}}. Are you sure?",
+          type : "default",
+      },
+      cancel : {
+          name : "Cancel the Operation",
+          type : "info",
+      }
     }
 };

@@ -1,0 +1,12 @@
+<div class="col-md-12">
+    <div class="card row">
+        <h4 class="h4 card-header">{{boxTitle}}</h4>
+        <div class="card-body">
+            <p>{{boxMessage}}</p>
+        </div>
+        <div class="card-footer row">
+            <input type="button" class={{concat "btn col-md-6 btn-" cancelType}} {{action cancelAction model}} value="{{cancelName}}">
+            <input type="button" class={{concat "btn col-md-6 btn-" confirmType}} {{action confirmAction model}} value="{{confirmName}}">
+        </div>
+    </div>
+</div>
