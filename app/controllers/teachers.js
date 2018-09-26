@@ -1,12 +1,12 @@
 import Controller from '@ember/controller';
 
 export default Controller.extend({
-    modelProperties : ['name', 'roll_no'],
+    modelProperties : ['name'],
 
     actions : {
         //create student
         createOne(model){
-            let student = this.store.createRecord('student', model);
+            let student = this.store.createRecord('teacher', model);
         },
 
         //read all students
