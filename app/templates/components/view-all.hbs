@@ -13,12 +13,16 @@
                 {{#each properties as |property|}}
                     <td>{{get model property}}</td>
                 {{/each}}
-                <td>{{#link-to 'students.edit' model}}
-                    {{t 'student.buttons.edit'}}
+                <td>{{#link-to editRoute model}}
+                    {{t 'a.edit'}}
                 {{/link-to}}</td>
-                <td>{{#link-to 'students.delete' model}}
-                    {{t 'student.buttons.delete'}}
+                <td>{{#link-to deleteRoute model}}
+                    {{t 'a.delete'}}
                 {{/link-to}}</td>
+            </tr>
+        {{else}}
+            <tr class="bg-info text-center">
+                {{t "info.nothing"}}
             </tr>
         {{/each}}
         </tbody>

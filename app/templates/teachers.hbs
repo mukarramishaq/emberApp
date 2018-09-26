@@ -1,2 +1,14 @@
-<h1>{{t "navbar.teacher"}}</h1>
+<div class="row" style="margin-top: 30px;">
+    <div class="col-md-10 offset-1">
+        {{#link-to 'teachers.create' class="btn btn-info"}}
+            {{t "teacher.buttons.create"}}
+        {{/link-to}}
+    </div>
+</div>
 {{outlet}}
+<div class="row" style="margin-top: 30px">
+    <div class="col-md-10 offset-1">
+        <h4 class="h4">{{t 'teacher.index.heading'}}</h4>
+        {{view-all models=model properties=modelProperties editRoute='teachers.edit' deleteRoute='teachers.delete'}}
+    </div>
+</div>
