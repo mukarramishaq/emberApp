@@ -14,9 +14,13 @@ Router.map(function() {
   });
   this.route('teachers', function() {
     this.route('create');
+      this.route('edit', {path:'/edit/:teacher_id'});
+      this.route('delete', {path:'/delete/:teacher_id'});
   });
   this.route('courses', function() {
     this.route('create');
+      this.route('edit', {path:'/edit/:course_id'});
+      this.route('delete', {path:'/delete/:course_id'});
   });
 });
 
