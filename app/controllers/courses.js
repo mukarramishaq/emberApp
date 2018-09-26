@@ -4,29 +4,33 @@ export default Controller.extend({
     modelProperties : ['name', 'credit_hours'],
 
     actions : {
-        //create student
-        createOne(model){
-            let student = this.store.createRecord('course', model);
+        //create teacher
+        createOne({name, credit_hours}){
+            let course = this.store.createRecord('course', {name, credit_hours});
+            course.save();
         },
 
-        //read all students
+        //read all courses
         readAll(){
 
         },
 
-        //read one student
+        //read one course
         readOne(){
 
         },
 
-        //update one student
+        //update one course
         updateOne(){
 
         },
 
-        //delete one student
-        deleteOne(){
-
+        //delete one course
+        deleteOne({id, name, credit_hours}){
+            this.store.findRecord('course', id, { reload: true }).then(course=>{
+                console.log(course);
+                course.destroyRecord();
+            });
         }
     }
 });

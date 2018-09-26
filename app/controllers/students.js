@@ -30,8 +30,11 @@ export default Controller.extend({
         },
 
         //delete one student
-        deleteOne(){
-
+        deleteOne({id, name, roll_no}){
+            this.store.findRecord('student', id, { reload: true }).then(student=>{
+                console.log(student);
+                student.destroyRecord();
+            });
         }
     }
 });
