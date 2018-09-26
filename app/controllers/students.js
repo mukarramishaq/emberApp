@@ -5,8 +5,9 @@ export default Controller.extend({
 
     actions : {
         //create student
-        createOne(model){
-            let student = this.store.createRecord('student', model);
+        createOne({name, roll_no}){
+            let student = this.store.createRecord('student', {name, roll_no});
+            student.save();
         },
 
         //read all students
@@ -20,8 +21,12 @@ export default Controller.extend({
         },
 
         //update one student
-        updateOne(){
-
+        updateOne({id, name, roll_no}){
+            this.store.findRecord('student', id).then(student=>{
+                student.set('name', name);
+                student.set('roll_no', roll_no);
+                student.save();
+            });
         },
 
         //delete one student

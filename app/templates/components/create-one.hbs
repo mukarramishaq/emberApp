@@ -1,4 +1,4 @@
-<form {{action 'createOne' model on='submit'}} class="">
+<form {{action myAction model on='submit'}} class="">
 
     {{#each model.errors.base as |error|}}
         <p class="error">{{error.message}}</p>
@@ -9,7 +9,8 @@
             <label for="id-input-{{property}}">
                 Enter {{property}}:
             </label>
-            <input id="id-input-{{property}}" type="text" class="form-control" value="{{get model property}}" name="{{property}}">
+            {{input id=(concat "id-input-" property) type="text" class="form-control" value=(get model property) name=property}}
+            <!--<input id="id-input-{{property}}" type="text" class="form-control" value="{{get model property}}" name="{{property}}">-->
         </div>
     {{/each}}
     <input type="submit" class="btn btn-primary" value="Create">
