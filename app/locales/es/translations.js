@@ -22,8 +22,29 @@ export default {
         },
         "buttons" : {
           "create" : "Create New Student",
-          "edit" : "Edit",
-          "delete" : "Delete"
         }
+    },
+
+    "teacher" : {
+        "index" : {
+            "heading" : "List of All Teachers"
+        },
+        "buttons" : {
+            "create" : "Create New Teacher",
+        }
+    },
+
+    "course" : {
+        "index" : {
+            "heading" : "List of All Courses"
+        },
+        "buttons" : {
+            "create" : "Create New Course",
+        }
+    },
+
+    a : {
+        edit : "Edit",
+        delete : "Delete"
     }
 };
