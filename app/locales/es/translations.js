@@ -59,5 +59,17 @@ export default {
           name : "Cancel the Operation",
           type : "info",
       }
+    },
+
+    create : {
+      button : {
+          name : "Create {{object}}"
+      }
+    },
+
+    edit : {
+      button : {
+          name : "Edit {{object}}"
+      }
     }
 };

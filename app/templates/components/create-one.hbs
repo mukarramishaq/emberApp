@@ -10,8 +10,8 @@
                 Enter {{property}}:
             </label>
             {{input id=(concat "id-input-" property) type="text" class="form-control" value=(get model property) name=property}}
-            <!--<input id="id-input-{{property}}" type="text" class="form-control" value="{{get model property}}" name="{{property}}">-->
+
         </div>
     {{/each}}
-    <input type="submit" class="btn btn-primary" value="Create">
+    <input type="submit" class="btn btn-primary" value="{{buttonName}}">
 </form>

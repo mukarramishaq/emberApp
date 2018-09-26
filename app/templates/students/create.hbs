@@ -1,7 +1,10 @@
 <div class="row">
     <div class="col-md-4 offset-4 border border-box">
         <h4 class="h4">{{t "student.buttons.create"}}</h4>
-        {{create-one model=model properties=modelProperties myAction='createIt' createObject=(action "createOne")}}
+        {{create-one model=model properties=modelProperties myAction='createIt'
+                     createObject=(action "createOne")
+                     buttonName=(t "create.button.name" object="Student")
+        }}
     </div>
 </div>
 {{outlet}}
